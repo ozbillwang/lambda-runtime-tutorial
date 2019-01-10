@@ -10,11 +10,13 @@ export HOME=/tmp
 cat /etc/*release
 python --version
 
-pip freeze
-
+# install pip and list python packages
 pushd /tmp
 curl -L https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py --user
 cd .local/bin
+./pip freeze
+
+# run aws commands
 ./pip install --user awscli
 ./aws sts get-caller-identity --output text --query 'Account'
 
