@@ -10,8 +10,7 @@ export HOME=/tmp
 cat /etc/*release
 python --version
 
-#echo "help('modules')" > /tmp/modules_list.py
-#python /tmp/modules_list.py
+pip freeze
 
 pushd /tmp
 curl -L https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py --user
